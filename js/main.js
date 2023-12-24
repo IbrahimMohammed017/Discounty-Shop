@@ -197,11 +197,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Add popstate event listener
-    window.addEventListener("popstate", function (event) {
-      if (event.state && event.state.popup) {
-        closePopup();
-      }
-    });
+  window.addEventListener("popstate", function (event) {
+    closePopup();
+  });
 
   function showPopup() {
     document.querySelectorAll(this.dataset.popup).forEach((popup) => {
@@ -221,7 +219,6 @@ document.addEventListener("DOMContentLoaded", function () {
     history.back();
   }
 });
-
 
 /****************************************/
 
