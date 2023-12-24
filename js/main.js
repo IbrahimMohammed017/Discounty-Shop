@@ -145,6 +145,38 @@ document.addEventListener("DOMContentLoaded", function () {
 /****************************************/
 
 /* Open And Close Products Popups */
+// document.addEventListener("DOMContentLoaded", function () {
+//   let open = document.querySelectorAll(".product-card");
+//   let close = document.querySelectorAll(".close");
+
+//   open.forEach((el) => {
+//     el.addEventListener("click", showPopup);
+//   });
+
+//   close.forEach((button) => {
+//     button.addEventListener("click", closePopup);
+//   });
+
+//   document.addEventListener("keydown", function (event) {
+//     // Check if the pressed key is the "Esc" key
+//     if (event.key === "Escape") {
+//       closePopup();
+//     }
+//   });
+
+//   function showPopup() {
+//     document.querySelectorAll(this.dataset.popup).forEach((popup) => {
+//       popup.style.display = "grid";
+//     });
+//   }
+
+//   function closePopup() {
+//     document.querySelectorAll(".popups").forEach((popup) => {
+//       popup.style.display = "none";
+//     });
+//   }
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   let open = document.querySelectorAll(".product-card");
   let close = document.querySelectorAll(".close");
@@ -164,18 +196,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Add popstate event listener
+  window.addEventListener("popstate", function (event) {
+    closePopup();
+  });
+
   function showPopup() {
     document.querySelectorAll(this.dataset.popup).forEach((popup) => {
       popup.style.display = "grid";
     });
+
+    // Add the current state to the history
+    history.pushState({ popup: true }, "");
   }
 
   function closePopup() {
     document.querySelectorAll(".popups").forEach((popup) => {
       popup.style.display = "none";
     });
+
+    // Go back in history
+    history.back();
   }
 });
+
 
 /****************************************/
 
