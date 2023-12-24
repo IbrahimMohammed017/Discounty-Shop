@@ -196,9 +196,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Add popstate event listener
-  window.addEventListener("popstate", function (event) {
-    closePopup();
+  // Add hashchange event listener
+  window.addEventListener("hashchange", function () {
+    if (location.hash === "") {
+      closePopup();
+    }
   });
 
   function showPopup() {
@@ -206,8 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.style.display = "grid";
     });
 
-    // Add the current state to the history
-    history.pushState({ popup: true }, "");
+    // Add hash to the URL
+    location.hash = "popup";
   }
 
   function closePopup() {
@@ -215,10 +217,15 @@ document.addEventListener("DOMContentLoaded", function () {
       popup.style.display = "none";
     });
 
-    // Go back in history
-    history.back();
+    // Remove hash from the URL
+    history.replaceState(
+      {},
+      document.title,
+      location.pathname + location.search
+    );
   }
 });
+
 
 /****************************************/
 
