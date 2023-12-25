@@ -1,4 +1,4 @@
-/* ******************* Main Rules ******************** */
+/* ******************* Main Rules ********************
 :root {
   --mainColor: #fd5825;
   --supColor: #3fabaf;
@@ -7,13 +7,31 @@
   --bgOpacityColor: rgba(247, 238, 229, 10%);
   --currentPrice: #080;
   --lastPrice: #f00;
-}
+} */
 
 /* From 992px To 1199px */
 @media (max-width: 1199px) {}
 
 /* From 768px To 991 */
 @media (max-width: 991px) {
+  .header-box ul {
+    margin: 0;
+    text-align: start;
+    flex-direction: column;
+    /* background-color: #fff; */
+  }
+
+  .header-box ul li {
+    margin: 0;
+    padding: 10px 5px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .header-box ul li {
+    border-bottom: 2px solid #fd5825;
+  }
+
   .title-details, .media-form {
     width: 100%;
     margin-bottom: 20px;
