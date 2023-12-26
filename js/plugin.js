@@ -87,3 +87,12 @@ $(document).ready(function () {
     $(".fa-tiktok").css("color", "#fff");
   }
 });
+
+// Trigger Nice Scroll
+  $("html").niceScroll({
+    cursorcolor: "#fd5825",
+    cursorwidth: "7.5px",
+    cursorborder: "1px solid #ff6200",
+    zindex: "2000",
+  });
+

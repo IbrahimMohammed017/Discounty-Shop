@@ -51,17 +51,12 @@ body {
 
 html {
   direction: rtl;
-  scroll-behavior: smooth;
 }
 
 body {
   color: var(--fontColor);
   background-image: url(images/logo/bg-light.jpg);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 a {
