@@ -215,3 +215,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// ********** Shuffle Products Card **********
+document.addEventListener("DOMContentLoaded", function () {
+  let crdsContainer = document.querySelector(".products-box");
+  // @ts-ignore
+  let cardsBlocks = Array.from(crdsContainer.children);
+  let orderRange = Array.from(Array(cardsBlocks.length).keys());
+
+  Shuffle(orderRange);
+
+  cardsBlocks.forEach((cardsBlock, index) => {
+    // @ts-ignore
+    cardsBlock.style.order = orderRange[index];
+  });
+
+  function Shuffle(array) {
+    // @ts-ignore
+    let current = array.length,
+      temp,
+      randome;
+    while (current > 0) {
+      randome = Math.floor(Math.random() * current);
+      current--;
+      temp = array[current];
+      array[current] = array[randome];
+      array[randome] = temp;
+    }
+    return array;
+  }
+});

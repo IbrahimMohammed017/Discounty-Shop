@@ -177,7 +177,7 @@ header {
 .header-box ul li {
   font-size: 16px;
   padding: 0 10px;
-  margin-left: 10px;
+  margin: 0 0 20px 10px;
 }
 
 .header-box ul li a {
