@@ -145,38 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
 /****************************************/
 
 /* Open And Close Products Popups */
-// document.addEventListener("DOMContentLoaded", function () {
-//   let open = document.querySelectorAll(".product-card");
-//   let close = document.querySelectorAll(".close");
-
-//   open.forEach((el) => {
-//     el.addEventListener("click", showPopup);
-//   });
-
-//   close.forEach((button) => {
-//     button.addEventListener("click", closePopup);
-//   });
-
-//   document.addEventListener("keydown", function (event) {
-//     // Check if the pressed key is the "Esc" key
-//     if (event.key === "Escape") {
-//       closePopup();
-//     }
-//   });
-
-//   function showPopup() {
-//     document.querySelectorAll(this.dataset.popup).forEach((popup) => {
-//       popup.style.display = "grid";
-//     });
-//   }
-
-//   function closePopup() {
-//     document.querySelectorAll(".popups").forEach((popup) => {
-//       popup.style.display = "none";
-//     });
-//   }
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   let open = document.querySelectorAll(".product-card");
   let close = document.querySelectorAll(".close");
@@ -226,23 +194,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 /****************************************/
 
 /* Gallery Settings */
-let photo = document.querySelectorAll(".photo");
-let tvShow = document.querySelectorAll(".element");
+document.addEventListener("DOMContentLoaded", function () {
+  let photo = document.querySelectorAll(".photo");
+  let tvShow = document.querySelectorAll(".element");
 
-photo.forEach((img) => {
-  img.addEventListener("click", show);
+  photo.forEach((img) => {
+    img.addEventListener("click", show);
+  });
+
+  function show() {
+    tvShow.forEach((imm) => {
+      // @ts-ignore
+      imm.style.display = "none";
+    });
+    document.querySelectorAll(this.dataset.show).forEach((sh) => {
+      sh.style.display = "block";
+    });
+  }
 });
-
-function show() {
-  tvShow.forEach((imm) => {
-    // @ts-ignore
-    imm.style.display = "none";
-  });
-  document.querySelectorAll(this.dataset.show).forEach((sh) => {
-    sh.style.display = "block";
-  });
-}
