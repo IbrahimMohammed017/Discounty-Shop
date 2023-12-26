@@ -96,6 +96,10 @@
 
 /* From 0px To 500px */
 @media (max-width: 500px) {
+  .logo {
+    width: 160px;
+  }
+
   .popups {
     padding: 0 10px;
   }
