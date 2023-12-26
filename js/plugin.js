@@ -58,7 +58,7 @@ $(document).ready(function () {
     $(".light").css("display", "none");
     $("body, header, .header-box ul").css(
       "background-image",
-      "url(../images/logo/bg-light.jpg)"
+      "url(images/logo/bg-light.jpg)"
     );
     $("body").css("--fontColor", "#000");
     $(".popups").css("--bgColor", "#fff");
@@ -75,7 +75,7 @@ $(document).ready(function () {
     $(".dark").css("display", "none");
     $("body, header, .header-box ul").css(
       "background-image",
-      "url(../images/logo/bg-dark.png)"
+      "url(images/logo/bg-dark.png)"
     );
     $("body").css("--fontColor", "#f7eee5");
     $(".popups").css("--bgColor", "#000");
