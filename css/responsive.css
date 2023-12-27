@@ -1,14 +1,3 @@
-/* ******************* Main Rules ********************
-:root {
-  --mainColor: #fd5825;
-  --supColor: #3fabaf;
-  --fontColor: #f7eee5;
-  --bgColor: #222;
-  --bgOpacityColor: rgba(247, 238, 229, 10%);
-  --currentPrice: #080;
-  --lastPrice: #f00;
-} */
-
 /* From 992px To 1199px */
 @media (max-width: 1199px) {}
 
@@ -98,6 +87,16 @@
 @media (max-width: 500px) {
   .logo {
     width: 160px;
+  }
+
+  .section>h2 {
+    font-size: 20px;
+  }
+
+
+  .header-box ul li {
+    font-size: 16px;
+    font-weight: bold;
   }
 
   .popups {
