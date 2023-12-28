@@ -264,9 +264,9 @@ header {
 }
 
 .product-card {
-  height: fit-content;
   cursor: pointer;
   margin-bottom: 20px;
+  height: fit-content;
   padding-bottom: 10px;
   border: 2px solid var(--mainColor);
   background: var(--bgOpacityColor);
