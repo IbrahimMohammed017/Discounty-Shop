@@ -90,7 +90,7 @@
   }
 
   .section>h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
 
@@ -99,6 +99,10 @@
     font-weight: bold;
   }
 
+  .product-card img {
+    height: 150px;
+  }
+  
   .popups {
     padding: 0 10px;
   }
