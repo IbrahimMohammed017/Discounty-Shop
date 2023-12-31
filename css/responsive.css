@@ -105,46 +105,51 @@
 
   .popups {
     padding: 0 10px;
+    width: fit-content;
   }
 
-  .title-details p {
-    font-size: 16px;
+  .title-details h1 {
+    margin-top: 20px;
   }
 
-  .details ul {
-    list-style-position: inside;
+    .title-details p {
+      font-size: 16px;
+    }
+
+    .details ul {
+      list-style-position: inside;
+    }
+
+    .details ul li {
+      font-size: 14px;
+    }
+
+    .images {
+      width: 100%;
+    }
+
+    .close {
+      padding: 3px 10px;
+    }
   }
 
-  .details ul li {
-    font-size: 14px;
+  /* From 768px To 991px */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
   }
 
-  .images {
-    width: 80%;
+  /* From 992px To 1199px */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
   }
 
-  .close {
-    padding: 0px 10px;
+  /* From 1200px To No End */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
   }
-}
-
-/* From 768px To 991px */
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-/* From 992px To 1199px */
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-/* From 1200px To No End */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
