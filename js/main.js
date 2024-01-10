@@ -257,19 +257,14 @@ function whatsapp() {
   var text =
     "Name: " +
     name +
-    "%0a" +
     "Phone: " +
     phone +
-    "%0a" +
     "Quan: " +
     quan +
-    "%0a" +
     "Message: " +
-    message +
-    "%0a";
+    message;
 
   var url = "https://wa.me/" + myNum + "?text=" + encodeURIComponent(text);
 
   window.open(url, "_blank").focus();
 }
-
