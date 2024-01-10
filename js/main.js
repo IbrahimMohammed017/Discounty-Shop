@@ -217,55 +217,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ********** Shuffle Products Card **********
-// document.addEventListener("DOMContentLoaded", function () {
-//   let crdsContainer = document.querySelector(".products-box");
-//   // @ts-ignore
-//   let cardsBlocks = Array.from(crdsContainer.children);
-//   let orderRange = Array.from(Array(cardsBlocks.length).keys());
+document.addEventListener("DOMContentLoaded", function () {
+  let crdsContainer = document.querySelector(".products-box");
+  // @ts-ignore
+  let cardsBlocks = Array.from(crdsContainer.children);
+  let orderRange = Array.from(Array(cardsBlocks.length).keys());
 
-//   Shuffle(orderRange);
+  Shuffle(orderRange);
 
-//   cardsBlocks.forEach((cardsBlock, index) => {
-//     // @ts-ignore
-//     cardsBlock.style.order = orderRange[index];
-//   });
+  cardsBlocks.forEach((cardsBlock, index) => {
+    // @ts-ignore
+    cardsBlock.style.order = orderRange[index];
+  });
 
-//   function Shuffle(array) {
-//     // @ts-ignore
-//     let current = array.length,
-//       temp,
-//       randome;
-//     while (current > 0) {
-//       randome = Math.floor(Math.random() * current);
-//       current--;
-//       temp = array[current];
-//       array[current] = array[randome];
-//       array[randome] = temp;
-//     }
-//     return array;
-//   }
-// });
+  function Shuffle(array) {
+    // @ts-ignore
+    let current = array.length,
+      temp,
+      randome;
+    while (current > 0) {
+      randome = Math.floor(Math.random() * current);
+      current--;
+      temp = array[current];
+      array[current] = array[randome];
+      array[randome] = temp;
+    }
+    return array;
+  }
+});
 
 // ********** WhatsApp Form **********
-function whatsapp() {
-  var myNum = 201094361474;
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-  var quan = document.getElementById("quan").value;
-  var message = document.getElementById("message").value;
+// function whatsapp() {
+//   var myNum = 201094361474;
+//   var name = document.getElementById("name").value;
+//   var phone = document.getElementById("phone").value;
+//   var quan = document.getElementById("quan").value;
+//   var message = document.getElementById("message").value;
 
-  var text =
-    "\nName: " +
-    name +
-    "\nPhone: " +
-    phone +
-    "\nQuan: " +
-    quan +
-    "\nMessage: " +
-    message;
+//   var text =
+//     "\nName: " +
+//     name +
+//     "\nPhone: " +
+//     phone +
+//     "\nQuan: " +
+//     quan +
+//     "\nMessage: " +
+//     message;
 
 
-  var url = "https://wa.me/" + myNum + "?text=" + encodeURIComponent(text);
+//   var url = "https://wa.me/" + myNum + "?text=" + encodeURIComponent(text);
 
-  window.open(url, "_blank").focus();
-}
+//   window.open(url, "_blank").focus();
+// }

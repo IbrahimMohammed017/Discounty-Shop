@@ -564,13 +564,13 @@
                   <option value="zone3">وادى النطرون</option>
                 </select>
                 <label>العنوان:</label>
-                <input type="text" name="Name:" id="name" required autocomplete="off" pattern="[0-9 A-Z a-z أ-ي]+" />
+                <input type="text" name="Name:" required autocomplete="off" pattern="[0-9 A-Z a-z أ-ي]+" />
                 <label>التليفون:</label>
-                <input type="tel" name="Phone:" id="phone" required autocomplete="off" pattern="[0-9]{11}" />
+                <input type="tel" name="Phone:" required autocomplete="off" pattern="[0-9]{11}" />
                 <label>الكمية المطلوبة:</label>
-                <input type="number" min="1" max="10" step="1" id="quan" class="quantity" value="" />
+                <input type="number" min="1" max="10" step="1" class="quantity" value="" />
                 <label>ملاحظات:</label>
-                <textarea name="Message:" id="message" required></textarea>
+                <textarea name="Message:" required></textarea>
                 <input type="number" class="pro-price" hidden value="" />
                 <label>إجمالى السعر:</label>
                 <input type="number" class="net-price" disabled value="" />
@@ -580,10 +580,10 @@
                 <input type="number" class="total-price" disabled value="" />
                 <input type="text" name="code" disabled hidden value="EG010601GEGE99">
                 <button class="button" type="submit">إرسال طلب الشراء</button>
-                <br>
+                <!-- <br>
                 <button class="button" type="button" onclick="whatsapp();">
                 Send On WhatsApp
-                </button>
+                </button> -->
               </form>
             </div>
           </div>
