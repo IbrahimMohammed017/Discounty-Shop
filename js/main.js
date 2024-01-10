@@ -256,13 +256,13 @@ function whatsapp() {
 
   var text =
     "Name: " +
-    name +
-    "Phone: " +
-    phone +
-    "Quan: " +
-    quan +
-    "Message: " +
-    message;
+    encodeURIComponent(name) +
+    "\nPhone: " +
+    encodeURIComponent(phone) +
+    "\nQuan: " +
+    encodeURIComponent(quan) +
+    "\nMessage: " +
+    encodeURIComponent(message);
 
   var url = "https://wa.me/" + myNum + "?text=" + encodeURIComponent(text);
 
