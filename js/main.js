@@ -255,16 +255,16 @@ function whatsapp() {
   var message = document.getElementById("message").value;
 
   var text =
-    "*Name :* " +
+    "Name: " +
     name +
     "%0a" +
-    "*Phone :* " +
+    "Phone: " +
     phone +
     "%0a" +
-    "*Quan :* " +
+    "Quan: " +
     quan +
     "%0a" +
-    "*Message :* " +
+    "Message: " +
     message +
     "%0a";
 
