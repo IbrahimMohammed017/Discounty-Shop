@@ -10,12 +10,12 @@ $(document).ready(function () {
 
     if (!isButtonClicked) {
       // زيادة الـ margin-top لعنصر ال .products الى 175 فى مدة 1000
-      productsElement.animate({ marginTop: "175px" }, 800);
+      // productsElement.animate({ marginTop: "175px" }, 800);
 
       // ظهور عنصر ul وتحويل الصفة الاساسية له الى display="flex" فى مدة 1500
       setTimeout(function () {
         ulElement.show().css({ display: "flex" }).animate({ opacity: 1 });
-      }, 800);
+      }, 400);
     } else {
       // اخفاء عنصر ال ul وتحويل الصفة الاساسية له الى display="none" فى مدة 1000
       ulElement.animate({ opacity: 0 }, 1000, function () {

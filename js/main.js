@@ -218,16 +218,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ********** Shuffle Products Card **********
 document.addEventListener("DOMContentLoaded", function () {
-  let crdsContainer = document.querySelector(".products-box");
   // @ts-ignore
-  let cardsBlocks = Array.from(crdsContainer.children);
-  let orderRange = Array.from(Array(cardsBlocks.length).keys());
+  let crdsContainers = document.querySelectorAll(".products-box");
 
-  Shuffle(orderRange);
+  crdsContainers.forEach((crdsContainer) => {
+    let cardsBlocks = Array.from(crdsContainer.children);
+    let orderRange = Array.from(Array(cardsBlocks.length).keys());
 
-  cardsBlocks.forEach((cardsBlock, index) => {
-    // @ts-ignore
-    cardsBlock.style.order = orderRange[index];
+    Shuffle(orderRange);
+
+    cardsBlocks.forEach((cardsBlock, index) => {
+      // @ts-ignore
+      cardsBlock.style.order = orderRange[index];
+    });
   });
 
   function Shuffle(array) {
@@ -263,7 +266,6 @@ document.addEventListener("DOMContentLoaded", function () {
 //     quan +
 //     "\nMessage: " +
 //     message;
-
 
 //   var url = "https://wa.me/" + myNum + "?text=" + encodeURIComponent(text);
 
