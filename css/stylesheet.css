@@ -1,5 +1,5 @@
 /* No Copy & Text */
-img {
+/* img {
   pointer-events: none;
   user-select: none;
   -ms-user-select: none;
@@ -22,7 +22,7 @@ body {
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
-}
+} */
 
 /* Main Rules */
 
@@ -47,6 +47,11 @@ body {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+::selection {
+  color: var(--bgColor);
+  background-color: var(--mainColor);
 }
 
 html {
